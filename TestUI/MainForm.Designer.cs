@@ -29,14 +29,20 @@ namespace TestUI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.serialPort = new System.IO.Ports.SerialPort(this.components);
             this.SuspendLayout();
             // 
-            // Form1
+            // serialPort
+            // 
+            this.serialPort.BaudRate = 115200;
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(908, 623);
+            this.Name = "MainForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -44,6 +50,8 @@ namespace TestUI
         }
 
         #endregion
+
+        private System.IO.Ports.SerialPort serialPort;
     }
 }
 
