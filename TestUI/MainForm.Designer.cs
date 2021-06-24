@@ -57,6 +57,7 @@ namespace TestUI
             // serialPort
             // 
             this.serialPort.BaudRate = 115200;
+            this.serialPort.PortName = "COM8";
             this.serialPort.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort_DataReceived);
             // 
             // graph1
