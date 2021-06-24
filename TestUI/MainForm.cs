@@ -43,7 +43,7 @@ namespace TestUI
         {
             int time, emg_1ch, emg_2ch, emg_3ch, emg_4ch; // int型のデータ
 
-            byte[] readdata = new byte[25]; // シリアルポートから1Byteごと値を取ってきてここに入れる．
+            byte[] readdata = new byte[31]; // シリアルポートから1Byteごと値を取ってきてここに入れる．
 
             // byte型のデータ
             byte[] Btime = new byte[4];
@@ -53,7 +53,7 @@ namespace TestUI
             byte[] Bemg_3ch = new byte[2];
             byte[] Bemg_4ch = new byte[2];
 
-            while (serialPort.BytesToRead > 8)
+            while (serialPort.BytesToRead > 32)
             {
                 readdata[0] = (byte)serialPort.ReadByte();
                 if (readdata[0] == 0x9A) // Header: プロトコルの先頭
@@ -67,8 +67,8 @@ namespace TestUI
                         }
                         setByte(Bemg_1ch);
                         setByte(Bemg_2ch);
-                        setByte(Bemg_3ch);
-                        setByte(Bemg_4ch);
+                        //setByte(Bemg_3ch);
+                        //setByte(Bemg_4ch);
 
                         // 時間データをbyte型からint型へ
                         if (timeList.Count > 0)
@@ -85,6 +85,13 @@ namespace TestUI
                         emg_3ch = BitConverter.ToInt16(Bemg_3ch, 0);
                         emg_4ch = BitConverter.ToInt16(Bemg_4ch, 0);
 
+                        //不適切な値が読み込まれたときはその値を記録しない．
+                        if (abs_judge(emg_1ch, 32768) || abs_judge(emg_2ch, 32768) || abs_judge(emg_3ch, 32768)
+                            || abs_judge(emg_4ch, 32768) || time < 0)
+                        {
+                            break;
+                        }
+
                         // リストに追加
                         timeList.Add(time);
                         emg_1chList.Add(emg_1ch);
@@ -95,20 +102,25 @@ namespace TestUI
                         // グラフ表示
                         Invoke((setfocus)delegate ()
                         {
+                            label1.Text = emg_1ch.ToString();
+                            label2.Text = emg_2ch.ToString();
                             MakeGraphicsEMG((short)emg_1ch, (short)emg_2ch);
                         });
                         break;
                     }
                     else if (readdata[1] == 0x93) // 計測時刻応答
                     {
-                        for (int i=2; i<16; i++) // Parameter Size = 14byte
+                        for (int i=0; i<30; i++) // Parameter Size: 14byte + bcc Size: 16
                         {
                             readdata[i] = (byte)serialPort.ReadByte();
                         }
                     }
-                    else if (readdata[1] == 0x15) // Parameter Size = 1byte
+                    else if (readdata[1] == 0x8F)
                     {
-                        readdata[2] = (byte)serialPort.ReadByte();
+                        for (int i=0; i<3; i++) // Parameter Size: 1byte + bcc Size: 2
+                        {
+                            readdata[i] = (byte)serialPort.ReadByte();
+                        }
                     }
                     else
                     {
@@ -127,6 +139,18 @@ namespace TestUI
             }
         }
 
+        // -abs< x < abs の範囲にあればfalse,なければtrue
+        private bool abs_judge(int input, int abs)
+        {
+            if (input > abs || input <= (-1 * abs))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         /// ボタンクリック
         /// ////////////////////////////////////////////////
@@ -146,11 +170,11 @@ namespace TestUI
                     serialPort.Close();
                     serialPort.Open();
                     openflag++;
-                    send_command("9A 13 00 00 01 01 00 00 00 00 00 01 01 00 00 00");//計測開始，終了時刻の設定
+                    send_command("9A 13 00 00 01 01 00 00 00 00 00 01 01 00 01 00");//計測開始，終了時刻の設定
                 }
                 else if (restart != 0)
                 {
-                    send_command("9A 13 00 00 01 01 00 00 00 00 00 01 01 00 00 00");
+                    send_command("9A 13 00 00 01 01 00 00 00 00 00 01 01 00 01 00");
                     restart = 0;
                     openflag++;
                 }
@@ -220,8 +244,8 @@ namespace TestUI
 
             Graphics g1 = graph1.CreateGraphics();
 
-            Pen pen1 = new Pen(Color.DarkOrange, 1);
-            Pen pen2 = new Pen(Color.DarkBlue, 1);
+            Pen pen1 = new Pen(Color.Yellow, 1);
+            Pen pen2 = new Pen(Color.Blue, 1);
             Pen penA = new Pen(Color.Black, 1);
 
             // 初期描画(y座標線)
@@ -257,6 +281,7 @@ namespace TestUI
             pen1.Dispose(); pen2.Dispose();
             penA.Dispose();
         }
+
 
         // a: 表示したいデータ値  Ypoint: 表示される座標
         int Ypoint(int a)

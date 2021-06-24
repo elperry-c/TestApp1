@@ -61,9 +61,8 @@ namespace TestUI
             // 
             // graph1
             // 
-            this.graph1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.graph1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.graph1.Location = new System.Drawing.Point(58, 341);
+            this.graph1.Location = new System.Drawing.Point(86, 344);
             this.graph1.Name = "graph1";
             this.graph1.Size = new System.Drawing.Size(576, 306);
             this.graph1.TabIndex = 0;
@@ -71,9 +70,8 @@ namespace TestUI
             // 
             // startButton
             // 
-            this.startButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.startButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.startButton.Location = new System.Drawing.Point(57, 716);
+            this.startButton.Location = new System.Drawing.Point(98, 719);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(104, 45);
             this.startButton.TabIndex = 2;
@@ -83,10 +81,9 @@ namespace TestUI
             // 
             // statusLabel
             // 
-            this.statusLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.statusLabel.AutoSize = true;
             this.statusLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusLabel.Location = new System.Drawing.Point(367, 709);
+            this.statusLabel.Location = new System.Drawing.Point(563, 709);
             this.statusLabel.Name = "statusLabel";
             this.statusLabel.Size = new System.Drawing.Size(83, 48);
             this.statusLabel.TabIndex = 3;
@@ -95,9 +92,8 @@ namespace TestUI
             // 
             // stopButton
             // 
-            this.stopButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.stopButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stopButton.Location = new System.Drawing.Point(207, 716);
+            this.stopButton.Location = new System.Drawing.Point(323, 719);
             this.stopButton.Name = "stopButton";
             this.stopButton.Size = new System.Drawing.Size(104, 45);
             this.stopButton.TabIndex = 5;
@@ -107,10 +103,9 @@ namespace TestUI
             // 
             // emgLabel
             // 
-            this.emgLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.emgLabel.AutoSize = true;
             this.emgLabel.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.emgLabel.Location = new System.Drawing.Point(304, 290);
+            this.emgLabel.Location = new System.Drawing.Point(332, 296);
             this.emgLabel.Name = "emgLabel";
             this.emgLabel.Size = new System.Drawing.Size(95, 48);
             this.emgLabel.TabIndex = 7;
@@ -119,10 +114,9 @@ namespace TestUI
             // 
             // fftLabel
             // 
-            this.fftLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.fftLabel.AutoSize = true;
             this.fftLabel.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.fftLabel.Location = new System.Drawing.Point(946, 290);
+            this.fftLabel.Location = new System.Drawing.Point(986, 296);
             this.fftLabel.Name = "fftLabel";
             this.fftLabel.Size = new System.Drawing.Size(75, 48);
             this.fftLabel.TabIndex = 9;
@@ -131,9 +125,8 @@ namespace TestUI
             // 
             // graph2
             // 
-            this.graph2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.graph2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.graph2.Location = new System.Drawing.Point(695, 341);
+            this.graph2.Location = new System.Drawing.Point(736, 344);
             this.graph2.Name = "graph2";
             this.graph2.Size = new System.Drawing.Size(576, 306);
             this.graph2.TabIndex = 8;
@@ -141,10 +134,9 @@ namespace TestUI
             // 
             // emgAxisX
             // 
-            this.emgAxisX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.emgAxisX.AutoSize = true;
             this.emgAxisX.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.emgAxisX.Location = new System.Drawing.Point(312, 650);
+            this.emgAxisX.Location = new System.Drawing.Point(341, 653);
             this.emgAxisX.Name = "emgAxisX";
             this.emgAxisX.Size = new System.Drawing.Size(63, 32);
             this.emgAxisX.TabIndex = 10;
@@ -153,10 +145,9 @@ namespace TestUI
             // 
             // fftAxisX
             // 
-            this.fftAxisX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.fftAxisX.AutoSize = true;
             this.fftAxisX.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.fftAxisX.Location = new System.Drawing.Point(923, 650);
+            this.fftAxisX.Location = new System.Drawing.Point(971, 653);
             this.fftAxisX.Name = "fftAxisX";
             this.fftAxisX.Size = new System.Drawing.Size(108, 32);
             this.fftAxisX.TabIndex = 11;
@@ -211,82 +202,76 @@ namespace TestUI
             // 
             // blueLegendLabel1
             // 
-            this.blueLegendLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.blueLegendLabel1.AutoSize = true;
             this.blueLegendLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.blueLegendLabel1.Font = new System.Drawing.Font("Meiryo UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.blueLegendLabel1.ForeColor = System.Drawing.Color.White;
-            this.blueLegendLabel1.Location = new System.Drawing.Point(527, 341);
+            this.blueLegendLabel1.Location = new System.Drawing.Point(563, 357);
             this.blueLegendLabel1.Name = "blueLegendLabel1";
             this.blueLegendLabel1.Size = new System.Drawing.Size(92, 46);
             this.blueLegendLabel1.TabIndex = 16;
-            this.blueLegendLabel1.Text = "上腕";
+            this.blueLegendLabel1.Text = "前腕";
             this.blueLegendLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // yellowLegendLabel1
             // 
-            this.yellowLegendLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.yellowLegendLabel1.AutoSize = true;
             this.yellowLegendLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.yellowLegendLabel1.Font = new System.Drawing.Font("Meiryo UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yellowLegendLabel1.ForeColor = System.Drawing.Color.Black;
-            this.yellowLegendLabel1.Location = new System.Drawing.Point(416, 341);
+            this.yellowLegendLabel1.Location = new System.Drawing.Point(456, 357);
             this.yellowLegendLabel1.Name = "yellowLegendLabel1";
             this.yellowLegendLabel1.Size = new System.Drawing.Size(92, 46);
             this.yellowLegendLabel1.TabIndex = 17;
-            this.yellowLegendLabel1.Text = "前腕";
+            this.yellowLegendLabel1.Text = "上腕";
             this.yellowLegendLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // yellowLegendLabel2
             // 
-            this.yellowLegendLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.yellowLegendLabel2.AutoSize = true;
             this.yellowLegendLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.yellowLegendLabel2.Font = new System.Drawing.Font("Meiryo UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yellowLegendLabel2.ForeColor = System.Drawing.Color.Black;
-            this.yellowLegendLabel2.Location = new System.Drawing.Point(1052, 341);
+            this.yellowLegendLabel2.Location = new System.Drawing.Point(1100, 357);
             this.yellowLegendLabel2.Name = "yellowLegendLabel2";
             this.yellowLegendLabel2.Size = new System.Drawing.Size(92, 46);
             this.yellowLegendLabel2.TabIndex = 18;
-            this.yellowLegendLabel2.Text = "前腕";
+            this.yellowLegendLabel2.Text = "上腕";
             this.yellowLegendLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // blueLegendLabel2
             // 
-            this.blueLegendLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.blueLegendLabel2.AutoSize = true;
             this.blueLegendLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.blueLegendLabel2.Font = new System.Drawing.Font("Meiryo UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.blueLegendLabel2.ForeColor = System.Drawing.Color.White;
-            this.blueLegendLabel2.Location = new System.Drawing.Point(1165, 341);
+            this.blueLegendLabel2.Location = new System.Drawing.Point(1212, 357);
             this.blueLegendLabel2.Name = "blueLegendLabel2";
             this.blueLegendLabel2.Size = new System.Drawing.Size(92, 46);
             this.blueLegendLabel2.TabIndex = 19;
-            this.blueLegendLabel2.Text = "上腕";
+            this.blueLegendLabel2.Text = "前腕";
             this.blueLegendLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label1.Location = new System.Drawing.Point(682, 650);
+            this.label1.Location = new System.Drawing.Point(603, 309);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 32);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "0";
+            this.label1.Size = new System.Drawing.Size(35, 32);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "**";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label2.Location = new System.Drawing.Point(1232, 650);
+            this.label2.Location = new System.Drawing.Point(529, 309);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 32);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "255";
+            this.label2.Size = new System.Drawing.Size(35, 32);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "**";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MainForm
@@ -294,7 +279,7 @@ namespace TestUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(1324, 810);
+            this.ClientSize = new System.Drawing.Size(1486, 788);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.predictionResultValue2);
