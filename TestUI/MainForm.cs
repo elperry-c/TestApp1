@@ -101,10 +101,18 @@ namespace TestUI
                     }
                     else if (readdata[1] == 0x93) // 計測時刻応答
                     {
-                        for (int i=2; i<15; i++)
+                        for (int i=2; i<16; i++) // Parameter Size = 14byte
                         {
-
+                            readdata[i] = (byte)serialPort.ReadByte();
                         }
+                    }
+                    else if (readdata[1] == 0x15) // Parameter Size = 1byte
+                    {
+                        readdata[2] = (byte)serialPort.ReadByte();
+                    }
+                    else
+                    {
+                        continue;
                     }
                 }
             }
